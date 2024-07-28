@@ -2,20 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
 
-//use Effect happens alongside render
-// if you use empty array effect only happens once
-// useEffect(() => {
-//   console.log(`It's ${emotion} right now`)
-// }, [])
-// or we can pass an property or state so that when it changes the effect occurs
-// useEffect(() => {
-//   console.log(`It's ${emotion} right now`)
-// }, [emotion])
 
 
 //example of destructoring, we can also do that for arrays {below}
 function App({ library }) {
-  const [emotion, setEmotion] = useState("Happy",);
+  //use Effect happens alongside render
+  // if you use empty array effect only happens once
+  // useEffect(() => {
+  //   console.log(`It's ${emotion} right now`)
+  // }, [])
+  // or we can pass an property or state so that when it changes the effect occurs
+  useEffect(() => {
+    console.log(`It's ${emotion} right now`)
+  }, [emotion])
+  // now we'll keep track of a variable
+  useEffect(() => {
+    console.log(`Secondary emotion is ${secondary}`)
+  }, [secondary])
+
+  const [emotion, setEmotion] = useState("Happy");
+  const [secondary, setSecondary] = useState("tired");
 
   return (
     <div className="App">
@@ -24,6 +30,8 @@ function App({ library }) {
         <p>Current emotion is {emotion}</p>
         <button onClick={() => { setEmotion("sad") }}>Sad</button>
         <button onClick={() => { setEmotion("excited") }}>Excited</button>
+        <h2>Current secondary emotion is {secondary}</h2>
+        <button onClick={() => { setSecondary("Grateful") }}>Grateful</button>
 
 
         <img src={logo} className="App-logo" alt="logo" />
