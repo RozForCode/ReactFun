@@ -47,4 +47,4 @@ If you'd like to connect or have any questions, please reach out:
 Email: navrosesinghjohal@gmail.com
 LinkedIn: Navrose Singh Johal
 # 🌟 Acknowledgements
-## Special thanks to the React community and all the resources that have helped me along this journey!
+## Special thanks to the React community, LinkedIn learning and all the resources that have helped me along this journey!
