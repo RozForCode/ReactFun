@@ -1,6 +1,8 @@
 # ReactFun 🎉
 ## Welcome to ReactFun, a repository where I document my journey of learning and mastering React. This space is dedicated to exploring the powerful front-end library, React, through various projects and experiments. Whether you're a fellow learner or an experienced developer, I hope you find something valuable here!
 
+
+<img align="right"  width="380" height="290" src="https://github.com/user-attachments/assets/08ae3bbc-01e0-4267-9aee-e887a0d81e68" frameBorder="0" >
 ## 📚 About
 As a software development student, I'm continually expanding my knowledge and skills in different programming languages and frameworks. This repository is a testament to my commitment to mastering React and building interactive, dynamic web applications.
 
