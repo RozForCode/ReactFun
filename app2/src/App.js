@@ -21,6 +21,8 @@ function App() {
     alert(`${title}, ${color}`);
     txtTitle.current.value = "";
     hexColor.current.value = "";
+    setColor("#000000");
+    setTitle("");
   }
   return (
     <div className="App">
