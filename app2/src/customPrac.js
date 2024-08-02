@@ -1,6 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
+function useInput(initialValue) {
+    const [value, setValue] = useState(initialValue);
+    // useState returns a pair
+    // useRef returns a object
+    // our hook will return 
+    return [
+        {
+            value, onChange: e => {
+                setValue(e.target.value)
+            }
+        },
+        () => { setValue(initialValue) }
+    ]
+}
+
+
+
 import { useRef } from 'react'
 import { useState } from 'react';
 // ref- way to react out to individual elements and check it's value
@@ -9,8 +26,8 @@ import { useState } from 'react';
 // also possilbe to manage forms using state, when we use ref we create a uncontrolled component
 // 
 function App() {
-    const [title, setTitle] = useState("");
-    const [color, setColor] = useState("#000000");
+    const [title, setTitle] = useInput("");
+    const [color, setColor] = useInput("#000000");
     const txtTitle = useRef(),
         hexColor = useRef();
     const submit = e => {
@@ -39,3 +56,7 @@ function App() {
 }
 
 export default App;
+
+// we can create our own custom hooks
+// they are made to deal with repeatable patterns
+// custom hook is a function that start with the word use
