@@ -27,30 +27,26 @@ import { useState } from 'react';
 // also possilbe to manage forms using state, when we use ref we create a uncontrolled component
 // 
 function App() {
-    const [title, setTitle] = useInput("");
-    const [color, setColor] = useInput("#000000");
-    const txtTitle = useRef(),
-        hexColor = useRef();
+    const [title, resetTitle] = useInput("");
+    const [color, resetColor] = useInput("#000000");
     const submit = e => {
 
         e.preventDefault();
-        const title1 = txtTitle.current.value;
-        const color1 = hexColor.current.value;
         alert(`${title}, ${color}`);
-        txtTitle.current.value = "";
-        hexColor.current.value = "";
-        setColor("#000000");
-        setTitle("");
+        resetColor();
+        resetTitle();
     }
     return (
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
+                //action
                 <form onSubmit={submit}>
-                    <input value={title} onChange={(event) => setTitle(event.target.value)} ref={txtTitle} type="text" placeholder='color title..' />
-                    <input value={color} onChange={(event) => { setColor(event.target.value) }} ref={hexColor} type="color" />
+                    <input {...title} type="text" placeholder='color title..' />
+                    <input  {...color} type="color" />
                     <button>ADD</button>
                 </form>
+
             </header>
         </div>
     );
