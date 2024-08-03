@@ -7,6 +7,7 @@ function useInput(initialValue) {
     // useRef returns a object
     // our hook will return 
     return [
+
         {
             value, onChange: e => {
                 setValue(e.target.value)
