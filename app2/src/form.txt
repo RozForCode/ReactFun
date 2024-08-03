@@ -1,0 +1,4 @@
+There are a ton of form libraries
+1. Formik - great for handling submissions
+2. React hook form - great for validations, cool things in the API for typescript
+useHooks.com - recipes for creating different types of hook
