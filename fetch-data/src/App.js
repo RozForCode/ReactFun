@@ -1,24 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react'
 
 function App() {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetch(`https://api.github.com/users/RozForCode`)
+      .then(res => Response.json())
+      .then(data => setData(data));//shorthand could be .then(setData)
+
+  })
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1></h1>
   );
 }
 
