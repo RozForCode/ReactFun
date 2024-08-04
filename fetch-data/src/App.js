@@ -16,18 +16,23 @@ function App() {
   const [data, setData] = useState(null);
   // handling loading states - loading state, success state and error state
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(null);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     fetch(`https://api.github.com/users/RozForCode`)
       .then(res => res.json())
       // data1 refers to the data that we get from the promise returned by previous .then()
       // which is then used to update the value of useState data that has been set to null
-      .then(data1 => setData(data1));//shorthand could be .then(setData)
+      .then(data1 => setData(data1))
+      .then(() => { setLoading(false); })
+      .catch(setError);//shorthand could be .then(setData)
 
   }, []);
+  if (loading) return <h1>Loading</h1>
+  if (error) return <pre>(JSON.stringify(error))</pre>
   if (data) return <GithubUser name={data.name} location={data.location} avatar={data.avatar_url} />
   return (
-    <h1></h1>
+    <h1>NULL</h1>
   );
 }
 
