@@ -53,27 +53,51 @@
 
 // export default App;
 // working with render props
+// import './App.css';
+
+// const tahoe_peaks = [
+//     { name: "Freel", elevation: 10891 },
+//     { name: "Monument", elevation: 7891 },
+//     { name: "pinato", elevation: 9091 },
+//     { name: "fuji", elevation: 1081 }
+// ]
+
+// function List({ data, renderItem, renderEmpty }) {
+//     return !data.length ? renderEmpty : <ul>{data.map((item) => {
+//         <li key={item.name}>{renderItem(item)}</li>
+//     })}</ul>
+// }
+// function App() {
+//     return (
+//         <List data={tahoe_peaks} renderEmpty={<p>This list is empty</p>}
+//             renderItem={(item) => {
+//                 <>{item.name} : {item.elevation} ft.</>
+//             }} />
+//     )
+// }
+
+// export default App;
+
+
+// react router 
 import './App.css';
-
-const tahoe_peaks = [
-    { name: "Freel", elevation: 10891 },
-    { name: "Monument", elevation: 7891 },
-    { name: "pinato", elevation: 9091 },
-    { name: "fuji", elevation: 1081 }
-]
-
-function List({ data, renderItem, renderEmpty }) {
-    return !data.length ? renderEmpty : <ul>{data.map((item) => {
-        <li key={item.name}>{renderItem(item)}</li>
-    })}</ul>
+function Home() {
+    return (<div>
+        <h1>My website home</h1>
+    </div>);
+}
+function About() {
+    return (<div>
+        <h1>My website about</h1>
+    </div>);
+}
+function Contact() {
+    return (<div>
+        <h1>My website Contact</h1>
+    </div>);
 }
 function App() {
-    return (
-        <List data={tahoe_peaks} renderEmpty={<p>This list is empty</p>}
-            renderItem={(item) => {
-                <>{item.name} : {item.elevation} ft.</>
-            }} />
-    )
+    return < Home />
 }
 
 export default App;
