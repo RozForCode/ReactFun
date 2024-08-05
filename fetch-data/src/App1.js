@@ -86,18 +86,16 @@ function Home() {
         <h1>My website home</h1>
     </div>);
 }
-function About() {
+export function About() {
     return (<div>
         <h1>My website about</h1>
     </div>);
 }
-function Contact() {
+export function Contact() {
     return (<div>
         <h1>My website Contact</h1>
     </div>);
 }
-function App() {
+export function App() {
     return < Home />
 }
-
-export default App;
