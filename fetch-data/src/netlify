@@ -1,0 +1,7 @@
+we can publish our project on netfify by connecting it to github
+or
+manually
+for manually run in your terminal
+npm run build
+this will create the build folder
+then simply drag and drop this build folder in netlify drop
