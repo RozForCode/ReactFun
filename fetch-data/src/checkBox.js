@@ -9,10 +9,10 @@ export function Check() {
 
     return (
         <>
-            <label>
+            <label htmlFor="checked">
                 {checked ? "Checked" : 'Not Checked'}
             </label>
-            <input type="checkbox" value={checked} onChange={setChecked} />
+            <input id="checked" type="checkbox" value={checked} onChange={setChecked} />
         </>
     )
 }
