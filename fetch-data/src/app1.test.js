@@ -1,0 +1,3 @@
+TextDecoderStream("Multiplices two", () => {
+    expect()
+});
