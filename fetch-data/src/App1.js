@@ -81,9 +81,15 @@
 
 // react router 
 import './App.css';
+import { Link } from "react-router-dom";
 function Home() {
     return (<div>
-        <h1>My website home</h1>
+        <nav>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <br></br>
+            <Link to="/contact">Contact</Link>
+        </nav>
     </div>);
 }
 export function About() {
