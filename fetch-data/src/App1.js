@@ -81,9 +81,10 @@
 
 // react router 
 import './App.css';
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 function Home() {
     return (<div>
+        <h1>Home</h1>
         <nav>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
@@ -95,6 +96,13 @@ function Home() {
 export function About() {
     return (<div>
         <h1>My website about</h1>
+        <nav>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <br></br>
+            <Link to="/contact">Contact</Link>
+        </nav>
+        <Outlet /> // helps show nested route
     </div>);
 }
 export function Contact() {
@@ -104,4 +112,12 @@ export function Contact() {
 }
 export function App() {
     return < Home />
+}
+
+export function History() {
+    return (
+        <div>
+            <h1>Our history</h1>
+        </div>
+    )
 }
