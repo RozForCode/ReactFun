@@ -1,4 +1,4 @@
 import { timeTwo } from "./functions";
 TextDecoderStream("Multiplices two", () => {
-    expect(timesTwo(4)).toBe(8);
+    expect(timeTwo(4)).toBe(8);
 });
