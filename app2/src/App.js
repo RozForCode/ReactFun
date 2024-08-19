@@ -39,3 +39,7 @@ function App() {
 }
 
 export default App;
+// places where we would we useRef
+// - it is used to persist values across renders without casuing rerender
+// good -  accessing and interacting with DOM elements directly or for keeping mutable values that do not trigger re-renders when updated.
+// You can use useRef to store functions or variables that do not need to be recreated on every render

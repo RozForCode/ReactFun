@@ -11,3 +11,4 @@ test("select checkbox", () => {
     expect(checkBox.checked).toEqual(true);
 
 })
+//fireevent - user-interaction with virtual DOM, click stimulates button like a actuall user clicking on it

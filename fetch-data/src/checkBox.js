@@ -5,7 +5,7 @@ export function Check() {
     const [checked, setChecked] = useReducer(checked => !checked,
         false
     )
-
+    // false is the initial value, after it negation of checked is returned
 
     return (
         <>
@@ -16,3 +16,4 @@ export function Check() {
         </>
     )
 }
+//htmlFor -  is used in place of the standard HTML for attribute to avoid conflicts with JavaScript's reserved for keyword.
