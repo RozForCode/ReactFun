@@ -93,6 +93,9 @@ function Home() {
         </nav>
     </div>);
 }
+// The Link component is used to create navigational links in your application. 
+//It allows you to navigate between different routes without reloading the entire page (client-side routing)
+//Unlike a traditional <a> tag, Link prevents the page from reloading and uses React Router's routing mechanism
 export function About() {
     return (<div>
         <h1>My website about</h1>
@@ -105,6 +108,10 @@ export function About() {
         <Outlet /> // helps show nested route
     </div>);
 }
+// outlet - It acts as a dynamic space in your component where nested routes will display their content.
+// Link to='x' works together with Route path='x' element={<x />}
+// Route usually in index.js
+
 export function Contact() {
     return (<div>
         <h1>My website Contact</h1>
