@@ -10,6 +10,9 @@ root.render(
     <App library="NSJ" />
   </React.StrictMode>
 );
+// createRoot adds the component in the DOM
+//It creates a "root" object, which is the entry point for rendering your React component tree into the DOM.
+//This root object manages the rendering process, allowing React to handle updates more efficiently 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

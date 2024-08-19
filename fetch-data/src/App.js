@@ -24,7 +24,8 @@ function App() {
       // which is then used to update the value of useState data that has been set to null
       .then(data1 => setData(data1))
       .then(() => { setLoading(false); })
-      .catch(setError);//shorthand could be .then(setData)
+      .catch(setError);
+    //shorthand could be .then(setData)
 
   }, []);
   if (loading) return <h1>Loading</h1>
