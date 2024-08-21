@@ -104,3 +104,52 @@ Create a component using useReducer that manages a counter with increment and de
 5. Idk give code for this
 
 ​‌‌‌GPT Feedback​
+
+2. Creating a component that focuses an input field as soon as it is rendered:
+ import React, {useEffect, useRef} from 'react';
+ function focusInput(){
+    const inputRef = useRef(null);
+    useEffect(()=>{
+        inputRef.current.focus();
+    },[]);
+    return (
+        <div>
+            input ref={inputRef} type='text' />
+        </div>
+    )
+ }
+explanation - useRef - creates a refernce to DOM element (input here)
+useEffect - runs focus action after the component mounts only once 
+
+creating simple conter component using useReducer 
+
+import React, {useReducer} from 'react';
+
+function counterReducer(state,action){
+
+        switch(action.type){
+            case 'increment':
+            return state+1;
+            case 'decrement:
+            return state-1;
+            default:
+            return state;
+        }
+}
+function counter(){
+    const [cont,dispatch] = useReducer(counterReducer, 0)
+    return (
+        <div>
+        <p>Count: {count}</p>
+        <button onClick={()=> dispatch({type:'increment'})}>Increment</button>
+        <button onClick={()=> dispatch({type:'decrement'})}>Descrement</button>
+        </div>
+    )
+}
+
+useReducer - hook that manages state logic - takes a reducer function and an initial state
+counterReducer - checks the action.type and modifies state
+dispatch - sends action to the reducer to update the state.
+
+
+
