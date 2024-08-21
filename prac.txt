@@ -1,0 +1,106 @@
+​‌‌‌questions​
+
+Multiple-Choice Questions (MCQs):
+What does the useReducer hook return?
+
+A) A stateful value and a function to update it.
+B) An array containing the current state and a dispatch function.
+C) A reference to a DOM element.
+D) A function to handle side effects.
+Which of the following is true about useRef in React?
+
+A) It triggers a re-render when the value changes.
+B) It can be used to keep track of mutable values across renders.
+C) It is mainly used for storing JSX elements.
+D) It is used to force component updates.
+What is the purpose of the htmlFor attribute in React?
+
+A) It binds a label to an input element.
+B) It sets the HTML element ID.
+C) It is used to define inline styles.
+D) It serves the same purpose as the class attribute in HTML.
+Which of the following statements about fireEvent in React Testing Library is correct?
+
+A) It simulates a user's event and updates the DOM.
+B) It only works with buttons and forms.
+C) It automatically re-renders the component after each event.
+D) It does not interact with DOM elements.
+What does the StrictMode component do in React?
+
+A) It checks for potential problems in the code during development.
+B) It forces React components to use strict typing.
+C) It limits the use of external libraries.
+D) It renders the component tree multiple times in production.
+Code Snippet Questions:
+Question:
+
+You have the following code snippet:
+jsx
+Copy code
+function App() {
+  const [checked, setChecked] = useReducer(checked => !checked, false);
+
+  return (
+    <>
+      <label htmlFor="checked">
+        {checked ? "Checked" : "Not Checked"}
+      </label>
+      <input id="checked" type="checkbox" value={checked} onChange={setChecked} />
+    </>
+  );
+}
+Task: Explain what happens when the checkbox is clicked. How does useReducer work in this case?
+Question:
+
+You need to create a component that focuses an input field as soon as it is rendered.
+Task: Write a simple React component using useRef that focuses on an input field on initial render.
+Question:
+
+Consider the following snippet:
+jsx
+Copy code
+import { fireEvent, render } from "@testing-library/react";
+import { Check } from "./Check";
+
+test("select checkbox", () => {
+  const { getByLabelText } = render(<Check />);
+  const checkBox = getByLabelText(/not checked/i);
+
+  fireEvent.click(checkBox);
+  expect(checkBox.checked).toEqual(true);
+});
+Task: Explain the role of fireEvent in this test case and how it is being used to simulate user interaction.
+Question:
+
+You have a component with the following return statement:
+jsx
+Copy code
+return (
+  <div className="App">
+    <form onSubmit={submit}>
+      <input ref={txtTitle} type="text" placeholder='color title..' />
+      <input ref={hexColor} type="color" />
+      <button>ADD</button>
+    </form>
+  </div>
+);
+Task: Describe how useRef is utilized here and why it might be preferred over useState in this scenario.
+Question:
+
+Create a component using useReducer that manages a counter with increment and decrement functionality.
+
+​‌‌‌My answers​
+
+1. A
+2. B
+3. A
+4. A
+5. A
+
+1.When the checkbox is clicked, it's value changes because setChecked function is triggered, useReducer first initializes the checked value of false and attaches a setChecked function with the checked variable, which is used to change it's value .
+2. Idk this one please give code
+3. Fireevent in this case stimulates the click of a normal user
+4. If we use useRef we won't have to re-initialize the values of input fields after every render
+5. Idk give code for this
+
+​‌‌‌GPT Feedback​
