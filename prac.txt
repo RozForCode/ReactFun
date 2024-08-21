@@ -121,8 +121,8 @@ Create a component using useReducer that manages a counter with increment and de
 explanation - useRef - creates a refernce to DOM element (input here)
 useEffect - runs focus action after the component mounts only once 
 
-creating simple conter component using useReducer 
-
+creating simple counter component using useReducer 
+--A counter component in React is a simple UI element that tracks and displays a numeric value, usually allowing users to increment or decrement that value through some form of interaction, like clicking a button.--
 import React, {useReducer} from 'react';
 
 function counterReducer(state,action){
@@ -151,5 +151,9 @@ useReducer - hook that manages state logic - takes a reducer function and an ini
 counterReducer - checks the action.type and modifies state
 dispatch - sends action to the reducer to update the state.
 
-
+dispatch argument here is shorthand of
+const action = {type:'increment'}
+dispatch(action);
+short hand is
+dispatch({type:'increment'})
 
