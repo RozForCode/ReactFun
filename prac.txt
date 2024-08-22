@@ -160,4 +160,49 @@ dispatch({type:'increment'})
 
 
 
-​‌‌‌questions​-test2
+​‌‌‌questions​
+// I'm gonna work on useState, useRef, useReducer, useEffect 
+
+
+Multiple Choice Questions (MCQs)
+What does the useState hook return?
+
+A) A stateful value and a function to update it
+B) A stateful value and an action object
+C) A stateful value and a reducer function
+D) A stateful value and a DOM reference
+Which of the following is NOT a valid way to use useEffect?
+
+A) For fetching data when a component mounts
+B) To directly manipulate the DOM
+C) To set up subscriptions
+D) To update the state with the same value
+What is the primary use case for useRef?
+
+A) To persist a value across renders without causing a re-render
+B) To manage form state
+C) To update the DOM directly
+D) To trigger a re-render when the value changes
+In the useReducer hook, what is the purpose of the dispatch function?
+
+A) To replace the useState hook
+B) To update the state directly
+C) To dispatch actions that describe how to update the state
+D) To manage side effects in the component
+When should you use useReducer over useState?
+
+A) When managing simple state values
+B) When the state logic is complex or depends on the previous state
+C) When dealing with form inputs
+D) When you need to access DOM elements
+Coding Questions
+useState: Create a component that has a button. Each time the button is clicked, it toggles the text displayed between "ON" and "OFF".
+
+useRef: Write a component that tracks how many times an input field has been focused. Use useRef to keep track of the focus count.
+
+useReducer: Implement a simple counter using useReducer with actions to increment, decrement, and reset the counter.
+
+useEffect: Create a component that fetches data from an API when the component mounts and displays the data. Ensure the effect only runs once, even if the component re-renders.
+
+
+Answers- 
