@@ -1,0 +1,4 @@
+// libraray to add icons - React Icons
+// command - npm install react-icons --save
+// syntax - import [ICONNAME] from 'react-icons/LIBNAME'
+// <iconname></iconname> or <ICONNAME />
