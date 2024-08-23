@@ -223,4 +223,20 @@ return (
   <button onClick={toggleState}>{state}</button>
 )
 
+//second coding answers
+
+const inputRef = useRef(null);
+const focusRef = useRef(0);
+
+const handleFocus= ()=>{
+  focusRef.current += 1;
+}
+
+return (
+  <input
+
+  onFocus={handleFocus}
+  />
+)
+
 //
