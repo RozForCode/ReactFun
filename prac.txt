@@ -239,4 +239,24 @@ return (
   />
 )
 
-//
+// third question
+const reducer = (count,action){
+  switch(action.type){
+    case 'increment': count++;return count;
+    case "decrement" : count --;return count;
+    case 'reset':return 0;
+    default: count;
+  }
+}
+
+
+const [count,dispatch] = useReducer(reducer,0);
+
+return (
+  <div>
+    <button onClick={()=>dispatch({type:'increment'})}>Incremnt</button>
+    <button onClick={()=>dispatch({type:'decrement'})}>Decrenemt</button>
+    <button onClick={()=>dispatch({type:'reset'})}>Resrt</button>
+  </div>
+)
+
