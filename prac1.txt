@@ -267,3 +267,8 @@ const [state, setData] = useState(null);
 useEffect(()=>{
   fetch(//https/).then(response=>response.json()).then(data=> setData(data)).catch(error => console.log(error));
 },[]);
+
+
+// to create react App
+npx create-react-app name 
+npm start
