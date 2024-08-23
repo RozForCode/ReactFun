@@ -260,3 +260,10 @@ return (
   </div>
 )
 
+// useEffect answers
+
+const [state, setData] = useState(null);
+
+useEffect(()=>{
+  fetch(//https/).then(response=>response.json()).then(data=> setData(data)).catch(error => console.log(error));
+},[]);
