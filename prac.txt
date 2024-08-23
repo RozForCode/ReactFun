@@ -206,3 +206,21 @@ useEffect: Create a component that fetches data from an API when the component m
 
 
 Answers- 
+1.a
+2.D
+3.A
+4.C
+5.B
+
+//first coding answers
+const [state,setState ] = useState("OFF");
+const toggleState = ()=>{
+  setState((state) =>{
+    state=="ON"? "OFF" : "ON";
+  } )
+}
+return (
+  <button onClick={toggleState}>{state}</button>
+)
+
+//
