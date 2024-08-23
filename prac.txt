@@ -207,7 +207,7 @@ useEffect: Create a component that fetches data from an API when the component m
 
 Answers- 
 1.a
-2.D
+2.D(c)
 3.A
 4.C
 5.B
