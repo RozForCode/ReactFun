@@ -1,7 +1,7 @@
 import './index.css'; // Import your main CSS file where Tailwind CSS is included
 import React, { Component } from 'react';
 import Search from "./components/Search"
-
+import addAppointment from './components/AddAppointment'
 function App() {
   return (
     <div className="App min-h-screen bg-gray-100 flex items-center justify-center">
@@ -13,9 +13,11 @@ function App() {
           This is a test component to verify Tailwind styles are applied correctly.
         </p>
       </div>
+      <AddAppointment />
       <Search />
     </div>
   );
 }
 
 export default App;
+
